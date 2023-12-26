@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Application Information -->
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ExampleDynamicIcon"
+        tools:targetApi="31">
+
+        <!-- Main Launcher Activity (Kotlin) -->
+        <activity
+            android:name=".MainActivityKotlin"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Secondary Activity (Java) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- Activity Aliases for Dynamic Icons -->
+        <!-- New Year Dynamic Icon Alias -->
+        <activity-alias
+            android:name=".NewYearAlias"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/new_year"
+            android:roundIcon="@mipmap/new_year_round"
+            android:targetActivity=".MainActivityKotlin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- Christmas Dynamic Icon Alias -->
+        <activity-alias
+            android:name=".ChristmasAlias"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/christmas"
+            android:roundIcon="@mipmap/christmas_round"
+            android:targetActivity=".MainActivityKotlin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- Background Service for Icon Change -->
+        <service
+            android:name=".IconChangeService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+    </application>
+
+</manifest>
