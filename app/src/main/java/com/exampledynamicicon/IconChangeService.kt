@@ -17,9 +17,9 @@ class IconChangeService : JobIntentService() {
         val currentMonth = calendar[Calendar.MONTH] + 1
         val currentDay = calendar[Calendar.DAY_OF_MONTH]
 
-        if (currentMonth == Calendar.DECEMBER + 1 && currentDay == 23) {
+        if (currentMonth == Calendar.JANUARY + 1 && currentDay == 3) {
             changeIconToChristmas(applicationContext)
-        } else if (currentMonth == Calendar.DECEMBER + 1 && currentDay == 26) {
+        } else if (currentMonth == Calendar.JANUARY + 1 && currentDay == 5) {
             changeIconToNewYear(applicationContext)
         } else {
             changeIconToMain(applicationContext)

@@ -13,10 +13,17 @@ class MainActivityKotlin : AppCompatActivity() {
 //        checkAndHandleIconChange()
 
 //        change icon based on specific date
+//        val intent = Intent(this, IconChangeService::class.java)
+//        enqueueWork(this, intent)
+
+
+    }
+
+//    call change icon methode in stop
+    override fun onStop() {
+        super.onStop()
         val intent = Intent(this, IconChangeService::class.java)
         enqueueWork(this, intent)
-
-
     }
 
 
@@ -27,4 +34,5 @@ class MainActivityKotlin : AppCompatActivity() {
             JobIntentService.enqueueWork(context, IconChangeService::class.java, JOB_ID, work)
         }
     }
+
 }
