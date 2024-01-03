@@ -16,12 +16,11 @@ class MainActivityKotlin : AppCompatActivity() {
 //        val intent = Intent(this, IconChangeService::class.java)
 //        enqueueWork(this, intent)
 
-
     }
 
-//    call change icon methode in stop
-    override fun onStop() {
-        super.onStop()
+    //    call change icon methode in stop
+    override fun onDestroy() {
+        super.onDestroy()
         val intent = Intent(this, IconChangeService::class.java)
         enqueueWork(this, intent)
     }
