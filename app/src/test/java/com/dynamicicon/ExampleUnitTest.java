@@ -1,4 +1,4 @@
-package com.exampledynamicicon;
+package com.dynamicicon;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.exampledynamicicon;
+package com.dynamicicon.mainjava;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -10,6 +10,10 @@ import android.os.Handler;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.dynamicicon.screens.ChristmasAlias;
+import com.dynamicicon.screens.NewYearAlias;
+import com.dynamicicon.screens.R;
 
 import java.util.Calendar;
 

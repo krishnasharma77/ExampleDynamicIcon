@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.exampledynamicicon'
+    namespace 'com.dynamicicon.screens'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.exampledynamicicon"
+        applicationId "com.dynamicicon.screens"
         minSdk 26
         targetSdk 34
         versionCode 1

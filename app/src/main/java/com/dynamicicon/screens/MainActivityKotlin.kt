@@ -1,4 +1,4 @@
-package com.exampledynamicicon
+package com.dynamicicon.screens
 
 import android.content.Context
 import android.content.Intent
@@ -13,12 +13,18 @@ class MainActivityKotlin : AppCompatActivity() {
 //        checkAndHandleIconChange()
 
 //        change icon based on specific date
-        val intent = Intent(this, IconChangeService::class.java)
-        enqueueWork(this, intent)
+//        val intent = Intent(this, IconChangeService::class.java)
+//        enqueueWork(this, intent)
 
 
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        //change icon based on specific date call this in destroy for perceived app crash
+        val intent = Intent(this, IconChangeService::class.java)
+        enqueueWork(this, intent)
+    }
 
     companion object {
         private const val JOB_ID = 1001

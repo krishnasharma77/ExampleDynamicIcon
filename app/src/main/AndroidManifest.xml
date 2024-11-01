@@ -16,7 +16,7 @@
 
         <!-- Main Launcher Activity (Kotlin) -->
         <activity
-            android:name=".MainActivityKotlin"
+            android:name="com.dynamicicon.screens.MainActivityKotlin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,18 +27,18 @@
 
         <!-- Secondary Activity (Java) -->
         <activity
-            android:name=".MainActivity"
+            android:name="com.dynamicicon.mainjava.MainActivity"
             android:exported="false" />
 
         <!-- Activity Aliases for Dynamic Icons -->
         <!-- New Year Dynamic Icon Alias -->
         <activity-alias
-            android:name=".NewYearAlias"
+            android:name="com.dynamicicon.screens.NewYearAlias"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/new_year"
             android:roundIcon="@mipmap/new_year_round"
-            android:targetActivity=".MainActivityKotlin">
+            android:targetActivity="com.dynamicicon.screens.MainActivityKotlin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -47,12 +47,12 @@
 
         <!-- Christmas Dynamic Icon Alias -->
         <activity-alias
-            android:name=".ChristmasAlias"
+            android:name="com.dynamicicon.screens.ChristmasAlias"
             android:enabled="false"
             android:exported="true"
             android:icon="@mipmap/christmas"
             android:roundIcon="@mipmap/christmas_round"
-            android:targetActivity=".MainActivityKotlin">
+            android:targetActivity="com.dynamicicon.screens.MainActivityKotlin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -61,7 +61,7 @@
 
         <!-- Background Service for Icon Change -->
         <service
-            android:name=".IconChangeService"
+            android:name="com.dynamicicon.screens.IconChangeService"
             android:exported="false"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
